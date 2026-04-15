@@ -10,7 +10,7 @@ class SQLRequest(BaseModel):
 @router.post("/execute")
 async def execute_sql(request: SQLRequest):
     try:
-        # SQLServerClient doit implémenter la logique de connexion à ta DB
+       
         db = PostgreSqlClient()
         result = db.execute_query(request.sql)
         
